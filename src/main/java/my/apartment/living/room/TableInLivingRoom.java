@@ -1,6 +1,8 @@
-package my.apartment;
+package my.apartment.living.room;
 
-public class tableInLivingRoom extends LivingRoom{
+import my.apartment.living.room.LivingRoom;
+
+public class TableInLivingRoom extends LivingRoom {
     //candle holder, candles, tableMats, napkins, cup holders
     private int candleHolder;
     private String candleHolderColor; //засега сетери и гетери само на стринговете.
@@ -52,8 +54,22 @@ public class tableInLivingRoom extends LivingRoom{
         this.cupCoasterColor = cupCoasterColor;
     }
 
-    public void printTableLivingRoom () {
-        System.out.printf("\nThe color of the candle holder on the dining table is %s.", candleHolderColor);
+    public void printTableLivingRoom() {
+        System.out.printf(
+                "The color of the candle holder on the dining table is %s." +
+                        "\nThe color of the candle on the dining table is %s. " +
+                        "\nThe color of the table mats on the dining table is %s. " +
+                        "\nThe color of the napkins on the dining table is %s. " +
+                        "\nThe color of the cup coaster on the dining table is %s. ",
+                candleHolderColor, candleColor, tableMatsColor, napkinsColor, cupCoasterColor);
+    }
+
+    public void printTableLivingRoom(boolean candlesAndMatsOnly) {
+        if (candlesAndMatsOnly) {
+            System.out.printf("A %s candle holder with %s candles and %s table mats are arranged on the table.", candleHolderColor, candleColor, tableMatsColor);
+        } else {
+            printLivingRoom();
+        }
 
     }
 }

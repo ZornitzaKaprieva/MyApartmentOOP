@@ -3,8 +3,9 @@ package my.apartment;
 public class MyApartmentOOP { //Родителски клас. Общи белези за всички класове.
     private boolean windows;
     private boolean balconies;
-    private String flooring;
+    private String flooring; //in method overloading
     private boolean curtains;
+    private String curtainsColor; //in method overloading
     private int lamps;
     private int paintings;
 
@@ -33,7 +34,7 @@ public class MyApartmentOOP { //Родителски клас. Общи беле
         if (!flooring.isEmpty() && !flooring.isBlank()) {
             this.flooring = flooring;
         } else {
-            System.out.println(" Please fill in the flooring details.");
+            System.out.println("Please fill in the flooring details.");
         }
     }
 
@@ -43,6 +44,14 @@ public class MyApartmentOOP { //Родителски клас. Общи беле
 
     public void setCurtains(boolean curtains) {
         this.curtains = curtains;
+    }
+
+    public String getCurtainsColor() {
+        return curtainsColor;
+    }
+
+    public void setCurtainsColor(String curtainsColor) {
+        this.curtainsColor = curtainsColor;
     }
 
     public int getLamps() {
@@ -55,12 +64,12 @@ public class MyApartmentOOP { //Родителски клас. Общи беле
         } else if (lamps == 0) {
             System.out.println("There are no lamps in the room.");
         } else {
-            System.out.println(" Please enter correct data for the number of lamps.");
+            System.out.println("Please enter correct data for the number of lamps.");
         }
     }
 
-    public int getPaintings(int numberOfPaintings) {
-        return paintings;
+    public int getPaintings(int paintings) {
+        return this.paintings;
     }
 
     public void setPaintings(int paintings) {
@@ -69,18 +78,22 @@ public class MyApartmentOOP { //Родителски клас. Общи беле
         } else if (paintings == 0) {
             System.out.println("There are no paintings in the room.");
         } else {
-            System.out.println(" Please enter correct data for the number of paintings.");
+            System.out.println("Please enter correct data for the number of paintings.");
         }
     }
     //може да стане и със switch
 
-    public void printData() {
-        System.out.printf("There are windows in the room: %b. \nThere are balconies in the room: %b. \nThe flooring in the room is %s.\nThere are curtains in the room: %b. \nThere is in the room %d lamps. \nThere are %d paintings in the room.", windows, balconies, flooring, curtains, lamps, paintings);
+    public void introduction(){
+        System.out.println("There are several rooms in my apartment.");
     }
 
-    public void printData(boolean printFlooringPaintingsAndLampsOnly) {
-        if (printFlooringPaintingsAndLampsOnly) {
-            System.out.printf("The flooring in the room is %s. \nThere is/are %d lamp/s in the room. \nThere is/are %d painting/s in the room.", flooring, lamps, paintings);
+    public void printData() {
+        System.out.printf("\nAre there windows in the room?: %b. \nIs there a balcony in the room: %b. \nThe flooring in the room is %s.\nAre there curtains in the room: %b. \nThe color of the curtains is %s. \nThere is in the room %d lamps. \nThere are %d paintings in the room.\n", windows, balconies, flooring, curtains, curtainsColor, lamps, paintings);
+    }
+
+    public void printData(boolean printFlooringAndCurtainsColorOnly) {
+        if (printFlooringAndCurtainsColorOnly) {
+            System.out.printf("The flooring in the room is %s. The color of the curtains is %s.\n", flooring, curtainsColor);
         } else {
             printData();
         }
