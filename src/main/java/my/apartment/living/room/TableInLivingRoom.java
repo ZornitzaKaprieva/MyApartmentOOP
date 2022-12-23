@@ -56,19 +56,19 @@ public class TableInLivingRoom extends LivingRoom {
 
     public void printTableLivingRoom() {
         System.out.printf(
-                "The color of the candle holder on the dining table is %s." +
+                "\nFrom TableLivingRoom: The color of the candle holder on the dining table is %s." +
                         "\nThe color of the candle on the dining table is %s. " +
                         "\nThe color of the table mats on the dining table is %s. " +
                         "\nThe color of the napkins on the dining table is %s. " +
-                        "\nThe color of the cup coaster on the dining table is %s. ",
+                        "\nThe color of the cup coaster on the dining table is %s.\n ",
                 candleHolderColor, candleColor, tableMatsColor, napkinsColor, cupCoasterColor);
     }
 
     public void printTableLivingRoom(boolean candlesAndMatsOnly) {
         if (candlesAndMatsOnly) {
-            System.out.printf("A %s candle holder with %s candles and %s table mats are arranged on the table.", candleHolderColor, candleColor, tableMatsColor);
+            System.out.printf("\nSummary TableLivingRoom: A %s candle holder with %s candles and %s table mats are arranged on the table.\n", candleHolderColor, candleColor, tableMatsColor);
         } else {
-            printLivingRoom();
+            printTableLivingRoom();
         }
 
     }

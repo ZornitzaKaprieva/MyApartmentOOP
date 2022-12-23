@@ -84,16 +84,16 @@ public class MyApartmentOOP { //Родителски клас. Общи беле
     //може да стане и със switch
 
     public void introduction(){
-        System.out.println("There are several rooms in my apartment.");
+        System.out.println("\nFrom MyApartmentOOP: There are several rooms in my apartment.");
     }
 
     public void printData() {
-        System.out.printf("\nAre there windows in the room?: %b. \nIs there a balcony in the room: %b. \nThe flooring in the room is %s.\nAre there curtains in the room: %b. \nThe color of the curtains is %s. \nThere is in the room %d lamps. \nThere are %d paintings in the room.\n", windows, balconies, flooring, curtains, curtainsColor, lamps, paintings);
+        System.out.printf("\nFrom MyApartmentOOP: Are there windows in the room?: %b. \nIs there a balcony in the room: %b. \nThe flooring in the room is %s.\nAre there curtains in the room: %b. \nThe color of the curtains is %s. \nThere is in the room %d lamps. \nThere are %d paintings in the room.\n", windows, balconies, flooring, curtains, curtainsColor, lamps, paintings);
     }
 
     public void printData(boolean printFlooringAndCurtainsColorOnly) {
         if (printFlooringAndCurtainsColorOnly) {
-            System.out.printf("The flooring in the room is %s. The color of the curtains is %s.\n", flooring, curtainsColor);
+            System.out.printf("\nSummary MyApartmentOOP: The flooring in the room is %s. The color of the curtains is %s.\n", flooring, curtainsColor);
         } else {
             printData();
         }

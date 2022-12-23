@@ -17,6 +17,14 @@ public class SetDetailsForLivingRoom {
         //from LivingRoom
         myLivingRoom.setTable(1);
         myLivingRoom.setTableColor("white");
+        myLivingRoom.setDiningChair(6);
+        myLivingRoom.setDiningChairColor("grey");
+        myLivingRoom.setCarpet("red, black & white");
+        myLivingRoom.setSofaColor("fawn");
+        myLivingRoom.setCoffeeTable(1);
+        myLivingRoom.setCoffeeTableColor("black");
+        myLivingRoom.setCabinets(2);
+        myLivingRoom.setCabinetsColor("white");
 
         //from tableInLivingRoom
         diningTable.setCandleHolderColor("black");
@@ -26,18 +34,18 @@ public class SetDetailsForLivingRoom {
         diningTable.setCupCoasterColor("grey");
 
 //print myLivingRoom:
-        System.out.println("\nmyLivingRoom:");
+        System.out.println("\nMy Living Room:");
 
-//        myLivingRoom.introduction(); //настроено е да излиза инфо от LivingRoom, а не от MyApartment (което е общо за всички и е дифолтна стойност)
-//        myLivingRoom.printData(); //настроено е да излиза инфо от LivingRoom, а не от MyApartment
-//        myLivingRoom.printData(true);
-//        myLivingRoom.printLivingRoom(); //
-//        myLivingRoom.printLivingRoom(true);
+        myLivingRoom.introduction(); //настроено е да излиза инфо от LivingRoom, а не от MyApartment (което е общо за всички и е дифолтна стойност)
+        myLivingRoom.printData(); //настроено е да излиза инфо от LivingRoom, а не от MyApartment
+        myLivingRoom.printData(true);  //закоментирано е в LivingRoom и затова излиза Summary MyApartmentOOP
+        myLivingRoom.printLivingRoom(); //
+        myLivingRoom.printLivingRoom(true);
 
 //print diningТable:
-        System.out.println("\ndiningТable:");
+        System.out.println("\nDining Table:");
         diningTable.printTableLivingRoom();
-        diningTable.printTableLivingRoom(false); //не разбирам защо конкретно тук else (false), не променя на дифолтна стойност
+        diningTable.printTableLivingRoom(true);
 
 
     }
