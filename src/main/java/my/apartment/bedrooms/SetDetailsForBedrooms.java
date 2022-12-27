@@ -10,6 +10,17 @@ public class SetDetailsForBedrooms {
     Bedroom1 bedroom1Adults = new Bedroom1();
     Bedroom2 bedroom2Child = new Bedroom2();
 
+    StorageBox WhatsInWhichBox = new StorageBox(); //няма нужда от сет, сетнато е в StorageBox
+
+    StorageBox box1 = new StorageBox();
+    StorageBox box2 = new StorageBox();
+    StorageBox box3 = new StorageBox();
+    StorageBox box4 = new StorageBox();
+    StorageBox box5 = new StorageBox();
+    StorageBox box6 = new StorageBox();
+    StorageBox box7 = new StorageBox();
+
+
 //set bedroomAdults from MyApartmentOOP:
         bigRoomAdults.setWindows(true); //from Bedrooms (Override from MyApartmentOOP)
         bigRoomAdults.setBalconies(false);
@@ -49,12 +60,26 @@ public class SetDetailsForBedrooms {
         bedroom2Child.setWardrobe(true);
         bedroom2Child.setBedroomChairs(1);
         bedroom2Child.setBedroomChairsColor("blue");
-        //todo
 
         bedroom2Child.setSideTable(1); // извличаме инфо от Bedroom2 (няма Override)
         bedroom2Child.setSideTableColor("black");
         bedroom2Child.setStorageBox(true);
-        bedroom2Child.setStorageBoxNum(6);
+        bedroom2Child.setStorageBoxNum(7);
+     //set StorageBox from bedroomChildren:
+       box1.setInStorageBox("Clothes");
+       box2.setInStorageBox("Clothes");
+       box3.setInStorageBox("Clothes");
+       box4.setInStorageBox("Toys");
+       box5.setInStorageBox("Toys");
+       box6.setInStorageBox("Plush toys");
+       box7.setInStorageBox("Board games and puzzles");
+        box1.setWhichStorageBox(1);
+        box2.setWhichStorageBox(2);
+        box3.setWhichStorageBox(3);
+        box4.setWhichStorageBox(4);
+        box5.setWhichStorageBox(5);
+        box6.setWhichStorageBox(6);
+        box7.setWhichStorageBox(7);
 
 //print bedroomAdults:
         System.out.println("\nBedroom-Adults:");
@@ -76,7 +101,17 @@ public class SetDetailsForBedrooms {
         bedroom2Child.printBedrooms(true);// това е, ако искаме да извлечем директно инфо от Bedroom2 Override, a не от Bedrooms или MyApartmentOOP
         bedroom2Child.printBedroom2(); // така извличаме директно инфо от Bedroom2
         bedroom2Child.printBedroom2(true);
-//Следва да добавя инфо от спалните в SetDetailsForMyApartment
+    //print StorageBox from bedroomChildren:
+        WhatsInWhichBox.printArraysBoxes(); //няма нужда от сет, сетнато е в StorageBox
+        box1.printInStorageBox();
+        box2.printInStorageBox();
+        box3.printInStorageBox();
+        box4.printInStorageBox();
+        box5.printInStorageBox();
+        box6.printInStorageBox();
+        box7.printInStorageBox();
+
+        System.out.println("\n\nMore details about the boxes see in SetDetailsForStorageBoxArrays.");
 
     }
 }

@@ -3,6 +3,7 @@ package my.apartment;
 import my.apartment.bedrooms.Bedroom1;
 import my.apartment.bedrooms.Bedroom2;
 import my.apartment.bedrooms.Bedrooms;
+import my.apartment.bedrooms.StorageBox;
 import my.apartment.living.room.LivingRoom;
 import my.apartment.living.room.TableInLivingRoom;
 
@@ -19,6 +20,8 @@ public class SetDetailsForMyApartmentSummary extends MyApartmentOOP {
         Bedrooms smallRoomChild = new Bedrooms();
         Bedroom1 bedroom1Adults = new Bedroom1();
         Bedroom2 bedroom2Child = new Bedroom2();
+
+        StorageBox WhatsInWhichBox = new StorageBox(); //няма нужда от сет, сетнато е в StorageBox
 
 //set  MyApartment:
         myApartment.introduction();
@@ -83,7 +86,7 @@ public class SetDetailsForMyApartmentSummary extends MyApartmentOOP {
         bedroom2Child.setSideTable(1); // извличаме инфо от Bedroom2 (няма Override)
         bedroom2Child.setSideTableColor("black");
         bedroom2Child.setStorageBox(true);
-        bedroom2Child.setStorageBoxNum(6);
+        bedroom2Child.setStorageBoxNum(7);
 
 //method overloading only:
         myLivingRoom.introduction();
@@ -106,5 +109,19 @@ public class SetDetailsForMyApartmentSummary extends MyApartmentOOP {
         bedroom2Child.printBedrooms(true);
         bedroom2Child.printBedroom2(true);
 
+        //вариант 1 за StorageBox:
+        WhatsInWhichBox.printArraysBoxes(); //няма нужда от сет, сетнато е в StorageBox
+
+        // вариант 2 за StorageBox:
+        int[] numberOfBoxes2 = {1, 2, 3, 4, 5, 6, 7};
+        String[] whatInBoxes2 = {"Clothes", "Toys", "Plush toys", "Board games and puzzles"};
+
+        System.out.printf("\n\nFrom SetDetailsForStorageBoxArrays: %s are stored in the storage box %d. (All other values are set similarly.)", whatInBoxes2[0], numberOfBoxes2[0]);
+
+        System.out.println("\n\nFrom SetDetailsForStorageBoxArrays: ");
+        System.out.println( whatInBoxes2[0] + " are stored in boxes "  + numberOfBoxes2[0] + ", "+ numberOfBoxes2[1] + " and " + numberOfBoxes2[2]+ ".");
+        System.out.println( whatInBoxes2[1] + " are stored in boxes "  + numberOfBoxes2[3] + " and " + numberOfBoxes2[4]+ ".");
+        System.out.println( whatInBoxes2[2] + " are stored in boxes "  + numberOfBoxes2[5] + ".");
+        System.out.println( whatInBoxes2[3] + " are stored in boxes "  + numberOfBoxes2[6] + ".");
     }
 }

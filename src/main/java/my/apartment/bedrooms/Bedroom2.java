@@ -5,7 +5,7 @@ public class Bedroom2 extends Bedrooms{
     private int sideTable;
     private String sideTableColor;
     private boolean StorageBox;
-    private int storageBoxNum; //todo може да се опише съдържанието им в отделен клас.
+    private int storageBoxNum;
 
 
     public int getSideTable() {
@@ -16,7 +16,7 @@ public class Bedroom2 extends Bedrooms{
         if (sideTable > 0) {
             this.sideTable = sideTable;
         } else if (sideTable==0) {
-            System.out.println("There is no side table in the first bedroom.");
+            System.out.println("There is no side table in the second bedroom.");
         } else {
             System.out.println("Please enter correct data for the number of side tables.");
         }
@@ -51,7 +51,7 @@ public class Bedroom2 extends Bedrooms{
         if (storageBoxNum > 0) {
             this.storageBoxNum = storageBoxNum;
         } else if (storageBoxNum == 0) {
-            System.out.println("There is no storage boxes in the first bedroom.");
+            System.out.println("There is no storage boxes in the second bedroom.");
         } else {
             System.out.println("Please enter correct data for the number of side tables.");
         }
